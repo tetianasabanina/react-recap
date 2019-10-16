@@ -4,3 +4,7 @@
 .item-add-form input {
     margin-right: 3px;
 }
+
+.item-add-form button {
+    white-space:nowrap
+}
