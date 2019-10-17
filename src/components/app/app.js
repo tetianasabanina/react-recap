@@ -122,6 +122,8 @@ export default class App extends Component {
                 return items.filter((item) => !item.done);
             case 'done':
                 return items.filter((item) => item.done);
+            case 'important':
+                return items.filter((item) => item.important);
             default:
                 return items;
         }
@@ -134,6 +136,8 @@ export default class App extends Component {
         const visibleItems = this.filter(
             this.search(todoData, term), filter);
         const doneCount = todoData.filter((el)=> el.done).length;
+        const important = todoData.filter((el)=>el.important);
+        console.log(important);
         const todoCount = todoData.length - doneCount;
         return (
             <div className="todo-app">

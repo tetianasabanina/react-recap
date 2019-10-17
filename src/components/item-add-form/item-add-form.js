@@ -7,7 +7,9 @@ class ItemAddForm extends Component {
     state = {
         label: ""
     };
+
     onLabelChange = (e) => {
+        // capitalize every word ?
         this.setState({
             label: e.target.value
         });
